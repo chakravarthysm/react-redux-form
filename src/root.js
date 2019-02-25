@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import { Provider } from "react-redux";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import store from "./store";
 import Dash from "./dash";
 class Root extends Component {
@@ -12,9 +13,9 @@ class Root extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
+        <MuiThemeProvider>
           <Dash />
-        </div>
+        </MuiThemeProvider>
       </Provider>
     );
   }
